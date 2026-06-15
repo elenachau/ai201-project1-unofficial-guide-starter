@@ -55,7 +55,7 @@ I kept the 256 token size and 64 token overlap, but I apply the window inside ea
 
 ## Retrieval Approach
 
-**Embedding model:** bge-m3
+**Embedding model:** all-MiniLM-L6-v2 (originally planned bge-m3, see note below)
 
 **Top-k:** 5
 
@@ -63,6 +63,12 @@ I kept the 256 token size and 64 token overlap, but I apply the window inside ea
 If deploying this for real users and cost wasn't a constraint, tradeoffs in choosing a different embedding model would be between latency for faster response retrieval and accuracy to make sure the answer is grounded. That would mean changing to a more precise embedding model that has expanded context length, which costs more but has higher retrieval. For multilingual support, it would be beneficial to have reviews from different platforms in a different native language. The tradeoff is whether there is high computation overhead. Some users may only want English. This support can offset accuracy, while others want to allocate the model capacity to multilingual use.
 
 bge-m3 was chosen since it is versatile for RAG. It supports hybrid retrieval (semantics and keyword matching)
+
+**Note on the model change:**
+I first planned bge-m3, but in Milestone 4 I switched to all-MiniLM-L6-v2. The reason is that MiniLM is the lightweight local default, it is only about 80MB instead of bge-m3 being around 2.3GB, and it runs on CPU with no API key and no rate limits. For my data, which is short student reviews in English, MiniLM is enough since I do not need the multilingual or hybrid features that bge-m3 adds. I embed with normalized vectors and store them in ChromaDB using cosine distance, so the distance scores stay between 0 and 2 and the under 0.5 checkpoint is meaningful. If I later wanted better accuracy or multilingual reviews I would go back to bge-m3.
+
+**Retrieval test results (Milestone 4):**
+I tested all 5 evaluation questions at top-k 5. The best distance was under 0.5 on 4 of the 5 (Keith quality 0.290, Sara Davis difficulty 0.421, Papachristos 0.456, who teaches CS135 0.363). The Bashira CS219 attendance question came back at 0.513, which is just over the line, but the exact correct chunk (Bashira Akter, CS219, Attendance: Not Mandatory) was still ranked first. Every query returned the relevant chunk in its top results with the correct source attached.
 
 ---
 
