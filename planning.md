@@ -45,6 +45,12 @@ The domain that I choose was student reviews of CS professors at the University 
 Since the sources are mostly short reviews, the chunk size will be in 256 tokens to prevent context fragmentation and dilution.
 Overlap is 64 tokens because most sources are short reviews. This also offsets very long reviews.
 
+**How I applied the chunking:**
+I kept the 256 token size and 64 token overlap, but I apply the window inside each review or comment instead of sliding it across the whole file. The reason is that a raw review body does not say the professor name, it just says things like "She rants off topic", so a plain chunk would not be answerable on its own. Before chunking I rebuild each unit into a self contained passage and inject the context. For Rate My Professor I add the professor name, the course, and the rating. For the Reddit threads I add the thread title and the username. Most reviews are shorter than 256 tokens so they stay as one chunk since a full review is already a complete thought, and only the longer units get split with the overlap window. I count tokens with the actual bge-m3 tokenizer so the sizes match the embedding model.
+
+**Final chunk count:**
+98 chunks across the 10 documents (50 from Rate My Professor, 48 from Reddit). The smallest chunk is 23 tokens, the largest is 256, and the average is 114. There were 0 empty chunks, 0 chunks with leftover HTML, and 0 chunks under 10 tokens.
+
 ---
 
 ## Retrieval Approach
@@ -102,16 +108,6 @@ graph LR
 ---
 
 ## AI Tool Plan
-
-<!-- For each part of the pipeline below, describe:
-     - Which AI tool you plan to use (Claude, Copilot, ChatGPT, etc.)
-     - What you'll give it as input (which sections of this planning.md, which requirements)
-     - What you expect it to produce
-     - How you'll verify the output matches your spec
-
-     "I'll use AI to help me code" is not a plan.
-     "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
-     with my specified chunk size and overlap" is a plan. -->
 
 **Milestone 3 — Ingestion and chunking:**
 I will use Claude 3.5 Sonnet to write pipeline logic. Inputs to the prompt will be the chunk strategy including token overlap, mermaid diagram architecture, and a text example from Rate My Professor and the subreddis. The expected output is a Python script that can process the text files into cleanly isolated text blocks with the professor name, attributed course, and reviews. The output will be verified by cross referencing with the sources.

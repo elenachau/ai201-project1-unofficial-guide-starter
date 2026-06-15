@@ -1,0 +1,65 @@
+
+Yea, all the CS135s have that rule. It wasn't just Simings
+
+
+5
+u/reddituser6788 avatar
+reddituser6788
+•
+8y ago
+Ok cool, thanks!
+
+
+2
+u/Svinkta avatar
+Svinkta
+•
+8y ago
+No problem.
+
+1
+mikek587
+•
+8y ago
+Seconded. I took it with Nicolescu and Feil-Seifer and had the same thing.
+
+2
+u/Stealthcatfood avatar
+Stealthcatfood
+•
+8y ago
+I can't speak about Erin from personal experience but the C in all sections is a remnant from when Leverington taught the class so it depends on if she is using his syllabus as a guide like Siming is. From her ratemyprofessor page it seems she in the very least is a tough grader. What problems did you have the first time you took it? I have found Siming to be an excellent teacher in other subjects as well as very approachable. Also, are you a CSE major?
+
+
+4
+u/reddituser6788 avatar
+reddituser6788
+•
+8y ago
+I just had a tough time writing the code out in paper, and at times understanding certain concepts. Yes, I am a CSE major
+
+
+1
+u/Stealthcatfood avatar
+Stealthcatfood
+•
+8y ago
+I also hate coding on paper, I had to sit down with my professors a few times to go over code because TAs tend to mark you down if your answer doesn't exactly match the one they were provided.
+
+Not to discourage you but it only gets harder from here, much harder. Now is the time to identify your weaknesses and what's holding you back. Dealing with that and making changes while things are still light will be much better than discovering the necessity for it in your second year. Best of luck this time around and don't be afraid to ask for help, utilize tutors, and have some one on one with professors if you can't find a way through.
+
+4
+[deleted]
+•
+8y ago
+Take it with Siming, he is better than Keith. I’ve taken it with both of them. I was a CSE major too and changed to ME because I hated coding because of that class. I got an 88 in the class the second time around with siming. Just do the projects and study like crazy for the tests.
+
+2
+jetsonian
+•
+8y ago
+Syllabuses are determined by the department for the most part so expect all CS 135 courses to be the same regardless of professor.
+
+If you're having trouble with CS 135 then you should probably find another major. I would give it this semester. If you do poorly this time around, then it's time to get real and make a change. The content covered in CS 135 is designed to be accessible by all science and engineering majors, not just CS&E students. After CS 135, the grading will be stricter, the content will be harder, and the professors will move faster (CS 485 had almost an entire semester of Linear Algebra and almost half of a semester of differential equations taught in a single lecture each).
+
+1

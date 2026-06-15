@@ -1,0 +1,7 @@
+# davis_vs_keith.txt  (reddit)  — 3 units
+
+[Reddit r/unr discussion — "CS 135 - Professor Davis or Keith?"] original post: I see the two profs are Sara Davis and Erin Keith. Has anybody had one of the two? Any recommendations on who I should take the class with? I had Keith for 135 and I definitely recommend her class. She seemed like she actually cared about getting us to understand the material, compared to the other profs once you get higher in the program (who just slam through powerpoints every lecture). She'll actually write code and theory on the board or in an IDE. Sometimes she'd get a little wrapped up in explaining theory, but looking back on it, it was beneficial bc it made me actually understand what we were doing. Also, she actually has industry experience, which not every CS prof has!
+
+[Reddit r/unr discussion — "CS 135 - Professor Davis or Keith?"] Mayer101jake: Erin was good, taking for data structures again :)
+
+[Reddit r/unr discussion — "CS 135 - Professor Davis or Keith?"] wlfmn9: Ms Erin is kind of a badass. Actually teach you extra stuff that you will use in your future job. She’s very fair with grades just as long you know your stuff and the way she teach just makes it so easy to understand.
