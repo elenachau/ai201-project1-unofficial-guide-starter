@@ -1,10 +1,11 @@
 sentence-transformers==3.4.1
 chromadb>=0.6.0
+huggingface-hub>=0.34,<1.0   # pin: gradio 6.x pulls hub>=1.0 which breaks transformers
 groq==0.15.0
 python-dotenv==1.0.1
 
 # Query interface — add whichever you use for Milestone 5:
-# gradio>=6.9.0
+gradio>=6.9.0
 # streamlit>=1.40.0
 
 # Document ingestion — add if your documents/ folder contains .pdf files:
